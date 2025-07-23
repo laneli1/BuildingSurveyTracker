@@ -1,0 +1,393 @@
+/* 공통 로그인 정렬 스타일 */
+body {
+	font-family: 'GmarketSans', sans-serif;
+	background-color: #f9f9f9;
+	margin: 0;
+	padding-top: 66px; /* 헤더 높이가 약 56px일 때 */
+}
+
+header {
+	min-height: 66px;
+	display: flex;
+	align-items: center;
+	z-index: 1100; /* 모바일 메뉴보다 위에 */
+}
+
+/* 로그인·회원가입 메인 */
+.login-main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100dvh;
+	padding: 0 1rem;
+	background-image: url('/static/asset/favicon/main.svg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.join-main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100dvh;
+	padding: 20px;
+	background-image: url('/static/asset/favicon/main.svg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.form-signin {
+	background-color: #fff;
+	padding: 2rem;
+	border-radius: 10px;
+	max-width: 420px;
+	width: 100%;
+	border: 2px solid #333;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	margin-bottom: 300px;
+}
+
+/* 그래프 관련 */
+.graph-container {
+	width: 100%;
+	height: 45vh; /* 화면 높이의 45% */
+	padding: 10px;
+	margin-bottom: 30px;
+	border: 2px solid #333;
+}
+
+/* 설정 관련 */
+.account-main {
+	width: 100%;
+	height: 45vh; /* 화면 높이의 45% */
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 30px;
+}
+
+.account-card {
+	background-color: #fff;
+	font-size: 14px;
+	line-height: 1.5;
+	padding: 16px;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 2px solid #333 !important;
+}
+
+/* 햄버거 버튼 스타일 */
+#hamburgerBtn {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.2s ease-in-out;
+}
+#hamburgerBtn:hover {
+	transform: scale(1.1);
+}
+
+/*==========================
+  오프캔버스 메뉴 본체
+==========================*/
+#mobileMenu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 75%;
+	max-width: 300px;
+	height: 100%;
+	background-color: #fff;
+	box-shadow: -4px 0 6px rgba(0,0,0,0.1);
+	transform: translateX(100%);
+	transition: transform 0.3s ease-in-out;
+	z-index: 1050;
+	overflow-y: auto;
+}
+#mobileMenu.show {
+	transform: translateX(0);
+}
+
+/* offcanvas 상단 헤더 */
+.offcanvas-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	background-color: #004085; /* 원하는 헤더 배경색 */
+}
+.offcanvas-header .fs-4 {
+	color: #fff;
+}
+.offcanvas-header button {
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+/* 메뉴 링크 스타일 */
+.mobile-nav a {
+	display: block;
+	padding: 1rem;
+	color: #333;
+	text-decoration: none;
+	border-bottom: 1px solid #eee;
+	font-size: 1.1rem;
+	text-align: center;
+}
+.mobile-nav a:hover {
+	background-color: rgba(0,123,255,0.1);
+	color: #007bff;
+}
+
+/*==========================
+  모바일 메뉴 백드롭
+==========================*/
+/* 백드롭 초기 상태 */
+#menuOverlay {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+	z-index: 1040;
+}
+
+/* 백드롭 열림 상태 */
+#menuOverlay.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* 로딩 관련 */
+.loading-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.loading-content {
+	text-align: center;
+}
+
+/* 팝업 관련 */
+.popup-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+}
+.popup-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid #007bff;
+	padding-bottom: 0.25rem;
+}
+.popup-header h5 {
+	margin: 0;
+	line-height: 1;
+}
+.popup-content {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	position: relative;
+	width: 100%;
+	max-width: 600px;
+	max-height: 80vh;
+	overflow-y: auto;
+}
+.popup-close {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+/* popupSingle 안의 controls 레이아웃 */
+.popup-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;    /* 레이블-셀렉트 간격 */
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* 레이블은 내용에 딱 맞춰서 고정 폭 */
+#shopLabelSingle {
+    flex: 0 0 auto;
+    white-space: nowrap;   /* 텍스트 줄 바꿈 방지 */
+    font-weight: bold;
+}
+
+/* 셀렉트박스가 남은 공간 전체 차지 */
+#shopSelectorSingle {
+    flex: 1 1 0;
+    min-width: 0;          /* flex-shrink 동작을 위해 필수 */
+}
+
+/* 팝업 캔버스 및 컨트롤 스타일 */
+#popupExposureCanvas,
+#popupConversionCanvas,
+#popupCustomerInCanvas {
+	width: 100%;
+	max-height: 300px;
+	height: auto;
+}
+#shopLabel,
+#shopLabelCv {
+	flex: 0 0 auto;
+	white-space: nowrap;
+	font-weight: bold;
+}
+#shopSelector,
+#shopSelectorCv {
+	flex: 1 1 0;
+	min-width: 0;
+}
+#shopSelector:focus,
+#shopSelectorCv:focus {
+	border-color: #007bff;
+	outline: none;
+	background-color: #e9f5ff;
+}
+
+/* 제목 호버 효과 */
+#exposureTitle,
+#conversionRateTitle,
+#customerInRateTitle {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #007bff;
+	cursor: pointer;
+	transition: color 0.3s ease, text-decoration 0.3s ease;
+	margin-bottom: 5px;
+}
+#exposureTitle:hover,
+#conversionRateTitle:hover,
+#customerInRateTitle:hover {
+	color: #0056b3;
+	text-decoration: underline;
+}
+
+
+/* 모바일 대응 */
+@media (max-width: 576px) {
+    #menuOverlay {
+    display: block !important;
+    }
+    #mobileMenu {
+    display: block !important;
+    }
+	.desktop-menu {
+		display: none !important;
+	}
+	.mobile-menu-toggle {
+		display: block;
+	}
+	.form-signin {
+		padding: 1.5rem;
+		max-width: 100%;
+	}
+	.form-signin h2 {
+		font-size: 1.4rem;
+		text-align: center;
+	}
+	.form-signin input,
+	.form-signin button {
+		font-size: 1rem;
+		padding: 10px;
+	}
+	.form-signin .form-floating label {
+		font-size: 0.9rem;
+	}
+}
+
+.menu-group {
+	border-bottom: 1px solid #eee;
+	background-color: #fff;
+}
+
+/* 상위 메뉴 (모든 항목 공통) */
+.menu-parent {
+	font-weight: bold;
+	font-size: 1.1rem;
+	color: #333;
+	cursor: pointer;
+	padding: 1rem;
+	text-align: center;
+	transition: background-color 0.2s;
+	position: relative;
+}
+
+/* 메뉴 hover 효과 */
+.menu-parent:hover {
+	background-color: #f8f8f8;
+}
+
+.menu-parent.only-link {
+    padding: 0
+}
+
+/* 상위 항목 내부 a가 있을 경우 (단일 링크용) */
+.menu-parent.only-link > a {
+	color: inherit;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* 하위 메뉴 감싸는 영역 */
+.menu-children {
+	display: none;
+	background-color: #fdfdfd;
+	border-top: 1px solid #eee;
+}
+
+/* 하위 메뉴 링크 */
+.menu-children a {
+	padding: 0.5rem 2rem;
+	display: block;
+	color: #333;
+	text-decoration: none;
+	font-size: 1rem;
+	text-align: left;
+}
+.menu-children a:hover {
+	background-color: #f0f8ff;
+}
+
+/* 펼침 상태 */
+.menu-parent.active {
+	background-color: #f0f0f0;
+}
+

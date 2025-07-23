@@ -7,6 +7,7 @@ This is a Flask-based web application for collecting building information throug
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+UI Design Preference: Clean, minimal aesthetic with light backgrounds, simple borders (2px solid #333), and dashboard-style layout similar to analytics interfaces. Prefers GmarketSans font family and light theme over dark theme.
 
 ## System Architecture
 
@@ -27,9 +28,10 @@ The application follows a traditional server-side rendered web architecture usin
 
 ### 2. Frontend Architecture
 - **Server-Side Rendered Templates**: Jinja2 templates for HTML generation
-- **Bootstrap CSS Framework**: Using dark theme variant for consistent UI
+- **Bootstrap CSS Framework**: Using light theme with custom styling for clean, minimal design
 - **Vanilla JavaScript**: Client-side interactions without additional frameworks
 - **Font Awesome Icons**: Icon library for enhanced UI
+- **Custom CSS**: GmarketSans font, clean borders (2px solid #333), light backgrounds (#f9f9f9)
 
 ### 3. Page Structure
 - **Main Survey Page** (`templates/index.html`): User-facing survey form
@@ -96,6 +98,17 @@ The application follows a traditional server-side rendered web architecture usin
 - Logging configured for debugging during development
 - CORS enabled for API access
 
+## Recent Changes
+
+### UI/UX Redesign (2025-07-23):
+- Updated CSS to match clean, minimal dashboard aesthetic
+- Changed from dark theme to light theme Bootstrap framework
+- Implemented custom styling with GmarketSans font family
+- Added consistent 2px solid #333 borders throughout the interface
+- Updated navigation bar to light theme with hover effects
+- Redesigned cards with clean white backgrounds and subtle shadows
+- Enhanced form styling with better focus states and spacing
+
 ## Notable Features
 
 ### Question Types Supported:
@@ -111,6 +124,8 @@ The application follows a traditional server-side rendered web architecture usin
 - Real-time form validation
 - Toast notifications for user feedback
 - Korean language interface
+- Clean, minimal UI design with light theme
+- Dashboard-style layout with bordered containers
 
 ### Administrative Capabilities:
 - Dynamic question creation and management

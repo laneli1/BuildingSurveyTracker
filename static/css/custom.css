@@ -1,6 +1,238 @@
-/* 커스텀 스타일 */
+/* 공통 스타일 */
+body {
+    font-family: 'GmarketSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
 
-/* 로딩 스피너 오버레이 */
+/* 컨테이너 및 레이아웃 */
+.container {
+    max-width: 1200px;
+}
+
+/* 카드 스타일 - 깔끔하고 미니멀한 디자인 */
+.card {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 2px solid #333;
+    padding: 1.5rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    background-color: #fff !important;
+    border-bottom: 2px solid #333;
+    min-height: 66px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: #333 !important;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #f0f8ff;
+    color: #007bff !important;
+}
+
+/* 폼 스타일 */
+.form-label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+.form-control,
+.form-select {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: border-color 0.2s ease-in-out;
+    margin-bottom: 0.5rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #007bff;
+    box-shadow: none;
+    background-color: #f8f9fa;
+}
+
+/* 질문 컨테이너 스타일 */
+#questionsContainer .mb-4 {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* 체크박스와 라디오 버튼 스타일 */
+.form-check {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.form-check-input {
+    margin-top: 0.25rem;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+}
+
+.form-check-input:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.form-check-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-check-label {
+    font-weight: 500;
+    color: #333;
+}
+
+/* 버튼 스타일 */
+.btn {
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #1e7e34;
+    border-color: #1e7e34;
+    transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+    background-color: transparent;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+}
+
+/* 테이블 스타일 */
+.table {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #333;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #333;
+    font-weight: bold;
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+}
+
+/* 모달 스타일 */
+.modal-content {
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: 2px solid #333;
+    background-color: #fff;
+}
+
+.modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+/* 배지 스타일 */
+.badge {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
+}
+
+/* 로딩 스피너 */
 .spinner-overlay {
     position: fixed;
     top: 0;
@@ -14,138 +246,50 @@
     z-index: 9999;
 }
 
-/* 카드 호버 효과 */
-.card {
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+/* 토스트 스타일 */
+.toast-container {
+    z-index: 1060;
 }
 
-.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.toast {
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+/* 질문 목록 특별 스타일 */
+#questionsList .card {
+    border-left: 4px solid #007bff;
+}
+
+#questionsList .card:hover {
+    border-left-color: #0056b3;
+}
+
+/* 옵션 입력 필드 */
+.option-input {
+    font-size: 0.9rem;
+}
+
+.input-group {
+    margin-bottom: 0.5rem;
 }
 
 /* 필수 항목 표시 */
 .text-danger {
     font-weight: bold;
-}
-
-/* 폼 요소 간격 조정 */
-.form-label {
-    margin-bottom: 0.75rem;
-    font-weight: 500;
-}
-
-.form-control, .form-select {
-    margin-bottom: 0.5rem;
-}
-
-/* 체크박스와 라디오 버튼 스타일 */
-.form-check {
-    margin-bottom: 0.5rem;
-    padding-left: 1.5em;
-}
-
-.form-check-input {
-    margin-top: 0.25em;
-}
-
-/* 질문 컨테이너 스타일 */
-#questionsContainer .mb-4 {
-    padding: 1.5rem;
-    border: 1px solid var(--bs-border-color);
-    border-radius: 0.5rem;
-    background-color: var(--bs-body-bg);
-}
-
-/* 옵션 입력 필드 스타일 */
-.option-input {
-    font-size: 0.9rem;
-}
-
-/* 응답 테이블 스타일 */
-.table th {
-    border-top: none;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.table td {
-    vertical-align: middle;
-}
-
-/* 모달 최대 높이 설정 */
-.modal-body {
-    max-height: 70vh;
-    overflow-y: auto;
-}
-
-/* 토스트 위치 조정 */
-.toast-container {
-    z-index: 1060;
-}
-
-/* 네비게이션 바 스타일 */
-.navbar-brand {
-    font-weight: 600;
-    font-size: 1.25rem;
-}
-
-.nav-link {
-    font-weight: 500;
-    transition: color 0.2s ease-in-out;
-}
-
-.nav-link:hover {
-    color: var(--bs-light) !important;
-}
-
-/* 버튼 스타일 개선 */
-.btn {
-    font-weight: 500;
-    transition: all 0.2s ease-in-out;
-}
-
-.btn:hover {
-    transform: translateY(-1px);
-}
-
-/* 배지 스타일 */
-.badge {
-    font-size: 0.75em;
-    font-weight: 500;
+    color: #dc3545 !important;
 }
 
 /* 빈 상태 스타일 */
 .text-center.text-muted {
-    color: var(--bs-secondary) !important;
+    color: #666 !important;
 }
 
-/* 반응형 테이블 개선 */
-@media (max-width: 768px) {
-    .table-responsive {
-        font-size: 0.875rem;
-    }
-    
-    .card-body {
-        padding: 1rem;
-    }
-    
-    .btn-sm {
-        font-size: 0.775rem;
-        padding: 0.25rem 0.5rem;
-    }
+.text-center.text-muted i {
+    color: #ccc;
 }
 
-/* 질문 목록 카드 스타일 */
-#questionsList .card {
-    border-left: 4px solid var(--bs-primary);
-}
-
-#questionsList .card:hover {
-    border-left-color: var(--bs-info);
-}
-
-/* 애니메이션 효과 */
+/* 애니메이션 */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -161,20 +305,30 @@
     animation: fadeIn 0.3s ease-in-out;
 }
 
-/* 입력 포커스 스타일 */
-.form-control:focus,
-.form-select:focus {
-    border-color: var(--bs-primary);
-    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
-}
-
-/* 체크박스 및 라디오 버튼 커스터마이징 */
-.form-check-input:checked {
-    background-color: var(--bs-primary);
-    border-color: var(--bs-primary);
-}
-
-.form-check-input:focus {
-    border-color: var(--bs-primary);
-    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+    
+    .btn-sm {
+        font-size: 0.775rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    #questionsContainer .mb-4 {
+        padding: 1.5rem;
+    }
+    
+    .form-check {
+        padding-left: 1.5rem;
+    }
 }
