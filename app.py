@@ -12,7 +12,7 @@ app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "your-secret-key-here")
 CORS(app)
 
-# In-memory storage for MVP(TEST)
+# In-memory storage for MVP(TEST2)
 survey_questions = [
     {
         'id': str(uuid.uuid4()),
